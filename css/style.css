@@ -1,0 +1,86 @@
+body, html {
+  margin: 0;
+  padding: 0em;
+  font-size: 1em;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+
+  font-family: 'Archivo Black', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+#top {
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: inherit;
+  font-size: 1.8em;
+  padding: .3em;
+}
+#bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: .6em;
+}
+#title_latest {
+  color: #e74c3c;
+}
+article {
+  font-size: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 .6em;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+}
+.dis_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+article p {
+  font-size: 1em;
+  font-family: 'roboto';
+  color: inherit;
+  opacity: 0.65;
+  flex: 1;
+  line-height: 1.24em;
+}
+div[class^="dis_"] {
+    font-size: 1.24em;
+}
+#article_image {
+  flex: 1;
+  background: url('http://www.newyorker.com/wp-content/uploads/2017/02/Frank-Embarrassment-of-Trump-1200.jpg');
+    -webkit-background-size: 100% auto;
+   background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+}
+@media (max-width: 550px) {
+  #bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  article {
+    padding: 0;
+  }
+  #title_latest {
+    padding-bottom: .3em;
+    font-size: 1.4em;
+  }
+  #article_image {
+    flex: 4;
+    max-height: 24em;
+  }
+}
+@media (min-width: 550px){
+  #article_image {
+    min-height: 400px;
+  }
+}
