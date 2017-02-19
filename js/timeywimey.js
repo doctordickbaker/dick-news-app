@@ -24,3 +24,5 @@ for(let x= 0; x < 2; x++){
       dis_day.innerHTML = activewd;
   }
 }
+
+/////  My overcomplicated method of fetching time info and displaying it.  Still working on weather...
