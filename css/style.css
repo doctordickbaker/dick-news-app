@@ -67,6 +67,7 @@ div[class^="dis_"] {
     display: flex;
     flex-direction: column;
   }
+  #article_image {display: none;}
   article {
     padding: 0;
   }
