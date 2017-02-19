@@ -6,8 +6,16 @@
     "start": "./node_modules/.bin/electron ."
   },
   "devDependencies": {
+    "addressparser": "^1.0.1",
+    "array-indexofobject": "0.0.1",
     "electron": "^1.4.15",
     "electron-prebuilt": "^1.2.7",
-    "feedparser": "^2.1.0"
+    "feedparser": "^2.1.0",
+    "lodash.assign": "^4.2.0",
+    "lodash.get": "^4.4.2",
+    "lodash.has": "^4.5.2",
+    "lodash.uniq": "^4.5.0",
+    "readable-stream": "^2.2.2",
+    "sax": "^1.2.2"
   }
 }
