@@ -16,9 +16,11 @@ for(let x= 0; x < 2; x++){
     case 0:
       let activemonth = month[timeinfo[1]];
       console.log(activemonth);
+      dis_date.innerHTML = activemonth;
       break;
     case 1:
       let activewd = weekday[timeinfo[0]];
       console.log(activewd);
+      dis_day.innerHTML = activewd;
   }
 }
