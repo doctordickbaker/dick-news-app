@@ -1,5 +1,13 @@
 {
-  "name"    : "dick-news-app",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "name": "dick-news-app",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ."
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-prebuilt": "^1.2.7",
+    "feedparser": "^2.1.0"
+  }
 }
