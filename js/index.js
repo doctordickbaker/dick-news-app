@@ -1,7 +1,10 @@
 var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed
+var dis_title = document.getElementById("dis_title");
+var dis_article = document.getElementById("dis_article");
 
-var req = request('http://somefeedurl.xml')
+
+var req = request('http://feeds.reuters.com/reuters/topNews?format=xml')
 var feedparser = new FeedParser();  /// options 
 
 req.on('error', function (error) {
@@ -30,6 +33,13 @@ feedparser.on('readable', function () {
   var item;
 
   while (item = stream.read()) {
-    console.log(item);
+    ///console.log(item.title);
+    dis_title.innerHTML = item.title;
+    dis_article.innerHTML = item.summary;
   }
 });
+
+
+///DICK CODE BELOW
+
+
