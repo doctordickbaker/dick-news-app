@@ -1,12 +1,8 @@
-//// Use node.js module for fetching RSS
-
-////  Use google image  module to search article's title for picture.
-
 var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed
 
 var req = request('http://somefeedurl.xml')
-var feedparser = new FeedParser([options]);
+var feedparser = new FeedParser();  /// options 
 
 req.on('error', function (error) {
   // handle any request errors
