@@ -2,7 +2,7 @@ var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed
 var dis_title = document.getElementById("dis_title");
 var dis_article = document.getElementById("dis_article");
-
+var art_image = document.getElementById("article_image");
 
 ///////  Quick time stuff
 
@@ -35,10 +35,12 @@ feedparser.on('readable', function () {
   var item;
 
   while (item = stream.read()) {
-    ///console.log(item.title);
+    ///console.log(item.media);
     
     dis_title.innerHTML = item.title;
     dis_article.innerHTML = item.summary.slice(0,350);
+    ///art_image.style.backgroundImage = url(item.image);
+    
     let currentArticle = item.link;
     dis_title.onclick = function(){
     window.open(currentArticle);
