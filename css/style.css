@@ -2,14 +2,12 @@ body, html {
   margin: 0;
   padding: 0em;
   font-size: 1em;
-  -webkit-app-region: drag;
 }
 .container {
   height: 100vh;
   width: 100vw;
   max-width: 1000px;
   margin: 0 auto 0 auto;
-
   font-family: 'Archivo Black', sans-serif;
   display: flex;
   flex-direction: column;
@@ -20,6 +18,7 @@ body, html {
   border-color: inherit;
   font-size: 1.8em;
   padding: .3em;
+  -webkit-app-region: drag;
 }
 #bottom {
   flex: 1;
