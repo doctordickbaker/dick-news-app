@@ -3,10 +3,8 @@ var request = require('request'); // for fetching the feed
 var dis_title = document.getElementById("dis_title");
 var dis_article = document.getElementById("dis_article");
 
-dis_day.innerHTML = "BANANA";
 
 ///////  Quick time stuff
-dis_day.innerHTML = "HAHAHAHAHA";
 
 var req = request('http://feeds.reuters.com/reuters/topNews?format=xml');
 var feedparser = new FeedParser();  /// options 
@@ -38,7 +36,13 @@ feedparser.on('readable', function () {
 
   while (item = stream.read()) {
     ///console.log(item.title);
+    
     dis_title.innerHTML = item.title;
-    dis_article.innerHTML = item.summary;
+    dis_article.innerHTML = item.summary.slice(0,350);
+    let currentArticle = item.link;
+    dis_title.onclick = function(){
+    window.open(currentArticle);
+    ///shell.openExternal(currentArticle);  /// should work, but didn't
+    }
   }
 });

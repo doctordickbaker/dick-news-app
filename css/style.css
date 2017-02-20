@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   padding: 0em;
   font-size: 1em;
+  -webkit-app-region: drag;
 }
 .container {
   height: 100vh;
@@ -67,7 +68,8 @@ div[class^="dis_"] {
     display: flex;
     flex-direction: column;
   }
-  #article_image {display: none;}
+  #article_image {
+    flex: 1;}
   article {
     padding: 0;
   }
