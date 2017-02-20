@@ -1,5 +1,8 @@
-var weekday = ["sun","mon","tues","wed","thurs", "fri", "sat"];
-var month = ["jan", "Feb", "March", "Apr", "May", "June", "july", "aug", "sept", "oct","nov"];
+var weekday  =  ["Sun","Mon","Tues","Wed","Thurs", "Fri", "Sat"];
+var month    =  ["jan", "Feb", "March", "Apr", "May", "June", "july", "aug", "sept", "oct","nov"];
+var dis_day  =  document.getElementById("dis_day");
+var dis_date =  document.getElementById("dis_date");
+var dis_temp =  document.getElementById("dis_temp");
 
 var d = new Date();
 
@@ -16,7 +19,7 @@ for(let x= 0; x < 2; x++){
     case 1:
       let activemonth = month[timeinfo[1]];
       console.log(activemonth);
-      dis_date.innerHTML = activemonth;
+      dis_date.innerHTML = activemonth + " " + d.getDate();
       break;
     case 0:
       let activewd = weekday[timeinfo[0]];

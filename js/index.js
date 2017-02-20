@@ -2,14 +2,13 @@ var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed
 var dis_title = document.getElementById("dis_title");
 var dis_article = document.getElementById("dis_article");
-var dis_day = document.getElementsByClassName("dis_day");
-var dis_date = document.getElementsByClassName("dis_date");
-var dis_temp = document.getElementsByClassName("dis_temp");
+
+dis_day.innerHTML = "BANANA";
 
 ///////  Quick time stuff
 dis_day.innerHTML = "HAHAHAHAHA";
 
-var req = request('http://feeds.reuters.com/reuters/topNews?format=xml')
+var req = request('http://feeds.reuters.com/reuters/topNews?format=xml');
 var feedparser = new FeedParser();  /// options 
 
 req.on('error', function (error) {
