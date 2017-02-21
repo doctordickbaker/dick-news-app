@@ -1,6 +1,8 @@
 var dis_temp = document.getElementById('dis_temp');
 // Require the module 
 var Forecast = require('forecast');
+var Locx = localStorage.getItem("x")
+var Locy = localStorage.getItem("y")
 
  
 // Initialize 
@@ -14,9 +16,8 @@ var forecast = new Forecast({
     seconds: 45
   }
 });
- 
 // Retrieve weather information from coordinates (Sydney, Australia) 
-forecast.get([-33.8683, 151.2086], function(err, weather) {
+forecast.get([Locx, Locy], function(err, weather) {
   if(err) return console.dir(err);
   console.dir(weather.currently.temperature);
   let currentTemp = weather.currently.temperature;
@@ -28,3 +29,6 @@ forecast.get([-33.8683, 151.2086], true, function(err, weather) {
   if(err) return console.dir(err);
   console.dir(weather);
 });
+
+
+//////forecast.get([-33.8683, 151.2086], function(err, weather) {

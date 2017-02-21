@@ -3,10 +3,13 @@ var request = require('request'); // for fetching the feed
 var dis_title = document.getElementById("dis_title");
 var dis_article = document.getElementById("dis_article");
 var art_image = document.getElementById("article_image");
+localStorage.setItem("x","34.512171");
+localStorage.setItem("y","-92.638978");
+localStorage.setItem("feedURL","http://feeds.reuters.com/reuters/topNews?format=xml");
 
 ///////  Quick time stuff
 
-var req = request('http://feeds.reuters.com/reuters/topNews?format=xml');
+var req = request(localStorage.getItem("feedURL"));
 var feedparser = new FeedParser();  /// options 
 
 req.on('error', function (error) {
