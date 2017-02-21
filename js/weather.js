@@ -29,6 +29,3 @@ forecast.get([-33.8683, 151.2086], true, function(err, weather) {
   if(err) return console.dir(err);
   console.dir(weather);
 });
-
-
-//////forecast.get([-33.8683, 151.2086], function(err, weather) {

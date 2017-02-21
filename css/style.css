@@ -87,3 +87,20 @@ div[class^="dis_"] {
     flex: 1;
   }
 }
+#but_settings {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  z-index: 4;
+  display: "none";
+}
+#settings_menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 4em;
+  background: rgba(200,200,200,1);
+  display: flex;
+}
