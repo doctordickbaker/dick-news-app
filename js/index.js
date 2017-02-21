@@ -35,7 +35,7 @@ feedparser.on('readable', function () {
   var item;
 
   while (item = stream.read()) {
-    ///console.log(item.media);
+    console.log(item.image);
     
     dis_title.innerHTML = item.title;
     dis_article.innerHTML = item.summary.slice(0,350);
