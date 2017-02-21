@@ -97,7 +97,7 @@ div[class^="dis_"] {
 }
 #settings_menu {
   position: fixed;
-  bottom: 0;
+  bottom: -4em;
   left: 0;
   width: 100vw;
   height: 4em;

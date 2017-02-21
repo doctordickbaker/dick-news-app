@@ -3,11 +3,10 @@ var request = require('request'); // for fetching the feed
 var dis_title = document.getElementById("dis_title");
 var dis_article = document.getElementById("dis_article");
 var art_image = document.getElementById("article_image");
-localStorage.setItem("x","34.512171");
-localStorage.setItem("y","-92.638978");
-localStorage.setItem("feedURL","http://feeds.reuters.com/reuters/topNews?format=xml");
+localStorage.setItem("userLocation",'-33.8683, 151.2086');
+localStorage.setItem("feedURL","http://kotaku.com/vip.xml");
+var article = ["FUCKFUCKFUCK"];
 
-///////  Quick time stuff
 
 var req = request(localStorage.getItem("feedURL"));
 var feedparser = new FeedParser();  /// options 
@@ -36,18 +35,18 @@ feedparser.on('readable', function () {
   var stream = this; // `this` is `feedparser`, which is a stream
   var meta = this.meta; // **NOTE** the "meta" is always available in the context of the feedparser instance
   var item;
-
   while (item = stream.read()) {
-    console.log(item.image);
-    
-    dis_title.innerHTML = item.title;
-    dis_article.innerHTML = item.summary.slice(0,350);
-    ///art_image.style.backgroundImage = url(item.image);
-    
-    let currentArticle = item.link;
-    dis_title.onclick = function(){
-    window.open(currentArticle);
-    ///shell.openExternal(currentArticle);  /// should work, but didn't
-    }
+    ///dis_title.innerHTML = item.title;
+    ///dis_article.innerHTML = item.summary.slice(0,350);    
+    ///article[state] = item;
+    article.push(item);
+    ///let currentArticle = item.link;
+    ///dis_title.onclick = function(){
+    ///window.open(currentArticle);
+    //}
   }
+
 });
+
+console.log(article);
+dis_title.innerHTML = article[1].title;

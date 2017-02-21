@@ -17,7 +17,7 @@ var forecast = new Forecast({
   }
 });
 // Retrieve weather information from coordinates (Sydney, Australia) 
-forecast.get([Locx, Locy], function(err, weather) {
+forecast.get([localStorage.getItem("userLocation")], function(err, weather) {
   if(err) return console.dir(err);
   console.dir(weather.currently.temperature);
   let currentTemp = weather.currently.temperature;
