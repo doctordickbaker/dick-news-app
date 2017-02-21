@@ -56,7 +56,7 @@ div[class^="dis_"] {
 }
 #article_image {
   flex: 1;
-  /*background: url('http://www.newyorker.com/wp-content/uploads/2017/02/Frank-Embarrassment-of-Trump-1200.jpg');*/
+  background: url('');
     -webkit-background-size: 100% auto;
    background-position: center;
   background-repeat: no-repeat;
@@ -84,6 +84,6 @@ div[class^="dis_"] {
 }
 @media (min-width: 550px){
   #article_image {
-    min-height: 400px;
+    flex: 1;
   }
 }
